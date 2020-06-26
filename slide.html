@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+                $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideDown("slow");
+                })
+
+                $("#flip1").click(function(){
+                    $("#panel1").slideUp("slow");
+                });
+
+                $("#flip2").click(function(){
+                    $("#panel2").slideToggle();
+                });
+
+            });
+        </script>
+    <style>
+         body{
+                    background-image:url("4.jpg");
+                    background-size:cover;
+            }
+            #d1,#d2,#d3{
+                border:1px solid;
+                padding:5px;
+                margin:5px;
+                background-color:darkgray;
+                opacity:0.75;
+            }
+            #panel,#panel1,#panel2, #flip, #flip1, #flip2 {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+            }
+
+            #panel {
+            padding: 50px;
+            display: none;
+            }
+    </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div>
+                <h1>Slide Effect in jQuery</h1>
+                <span class="display-4" style="font-size: 25px;">
+                    With jQuery you can create a sliding effect on elements.
+
+                    jQuery has the following slide methods:
+
+                        <ul>
+                            <li> slideDown()</li>
+                            <li> slideUp()</li>
+                            <li>slideToggle()</li>
+                        </ul>
+
+                </span>
+            </div>
+            <div id="d1">
+                <h1> Demonstration:</h1>
+                <h1 class="display-2" style="font-size: 25px;">Click on the panel and see the Slide down effect!!</h1>
+                <div id="flip">Click to see slide down effect</div>
+                <div id="panel">This is Demonstartion of slide down effect!</div>
+            </div>
+
+            <br>
+
+            <div id="d2">
+                <h1> Demonstration:</h1>
+                <h1 class="display-2" style="font-size: 25px;">Click on the panel and see the Slide up effect!!</h1>
+                <div id="flip1">Click to see slide up effect</div>
+                <div id="panel1">This is Demonstartion of slide down effect!</div>
+            </div>
+
+            <br>
+
+            <div id="d3">
+                <h1> Demonstration:</h1>
+                <h1 class="display-2" style="font-size: 25px;">Click on the panel and see the Toggle effect!!</h1>
+                <div id="flip2">Click to see toggle effect</div>
+                <div id="panel2">This is Demonstartion of toggle effect!</div>
+            </div>
+        </div>
+    </body>
+</html>

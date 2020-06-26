@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function()
+                {
+                    $("#drop").click(function()
+                    {
+                        $("#f1").slideToggle("slow");
+                    });
+                    $("#drop1").click(function()
+                    {
+                        $("#f2").slideToggle("slow");
+                    })
+                })
+            </script>
+            <style>
+                #f1,#f2{
+                    display: none;
+                }
+                body {
+                    background-image: url("suggestion.png");
+                    background-size:cover;
+                    position: static;
+                }
+                #f1,#f2{
+                    font-weight: bold;
+                    font-family: cursive;
+                    background-color:black;opacity:0.6;
+                    color: snow;
+                }
+                h1 {
+                    text-shadow: 2px 2px 3px #FF0000, 0 0 5px #0000FF;
+                }
+                .ml2 {
+                        font-weight: 900;
+                        font-size: 3.5em;
+                        }
+
+                        .ml2 .letter {
+                        display: inline-block;
+                        line-height: 1em;
+                    }
+                marquee{
+                    color:black;
+                    text-shadow: 3px 3px 6px #ce1111;
+                    font-family:cursive;
+                    font-size:x-large;
+                }
+                .center {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .wrapper {
+                    text-align: center;
+                }
+
+                .button {
+                    position: absolute;
+                    top: 50%;
+                }
+                a{
+                    color: black;
+                }
+            </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1 class="ml2" style="text-align: center;color:thistle" id="h">Suggestions Pleaseeeeee!!!!</h1>
+            
+            <table class="table table-striped table-light center" style="width: 20px;opacity:0.6;">
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <th>How would you rate us<br>Out of 10??</th>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th>Any Improvement Suggestion</th>
+                    <td><textarea name="ta" rows="10" cols="20"></textarea></td>
+                </tr>
+            </table>
+
+            <div class="wrapper">
+                <button class="btn btn-success "><a href="mainb.html">Submit</a></button>
+            </div>
+
+            
+           
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                <script>
+                    var textWrapper = document.querySelector('.ml2');
+                    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+                    anime.timeline({loop: true})
+                    .add({
+                        targets: '.ml2 .letter',
+                        scale: [4,1],
+                        opacity: [0,1],
+                        translateZ: 0,
+                        easing: "easeOutExpo",
+                        duration: 950,
+                        delay: (el, i) => 70*i
+                    }).add({
+                        targets: '.ml2',
+                        opacity: 0,
+                        duration: 1000,
+                        easing: "easeOutExpo",
+                        delay: 1000
+                    });
+                </script>
+        </div>
+    </body>
+</html>

@@ -11,18 +11,30 @@
         <script>
             $(document).ready(function()
             {
+                let hiddenFlag = false;
+
+                function changeFlag(flag) {
+                    $("#flag").text(flag);
+                }
+
                  $("#hide").click(function()
                  {
-                     $("#pp").hide(1000);
+                     $("#sampleText").hide(1000);
+                     hiddenFlag = true;
+                     changeFlag(hiddenFlag);
                  })
 
                  $("#show").click(function()
                  {
-                     $("#p").show(1000);
+                     $("#sampleText").show(1000);
+                     hiddenFlag = false;
+                     changeFlag(hiddenFlag);
                  })
 
                  $("#toggle").click(function(){
-                    $("#p1").toggle(1000);
+                    $("#sampleText").toggle(1000);
+                    hiddenFlag = !hiddenFlag;
+                    changeFlag(hiddenFlag);
                 });
             });
         </script>
@@ -52,9 +64,11 @@
             <div id="d1">
                 <h1> Demonstration:</h1>
                 <h1 class="display-2" style="font-size: 25px;">Click on the respective buttons and see the hide , show and toggle effect!!</h1>
-                <p id="p1">This is my first jquery page</p>
-                <p id="p" style="display: none;">This is my first jquery</p>
-                <p id="pp">This is my page</p>
+                <p id="sampleText">Sample Text</p>
+                <div>
+                    <span> Hidden Flag = </span>
+                    <span id = "flag">false</span>
+                </div>
                 <button id="hide">Hide</button>
                 <button id="show">Show</button>
                 <button id="toggle">Toggle</button>

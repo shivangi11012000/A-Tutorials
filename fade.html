@@ -11,19 +11,19 @@
         <script>
                 $(document).ready(function(){
                 $("#fadein").click(function(){
-                    $("#p1").fadeIn("slow");
+                    $("#fadeEffects").fadeIn("slow");
                 })
 
                 $("#fadeout").click(function(){
-                    $("#p2").fadeOut("slow");
+                    $("#fadeEffects").fadeOut("slow");
                 });
 
                 $("#fadetoggle").click(function(){
-                    $("#p3").fadeToggle("slow");
+                    $("#fadeEffects").fadeToggle("slow");
                 });
 
                 $("#fadeto").click(function(){
-                    $("#p1").fadeTo(0.4);
+                    $("#fadeEffects").fadeTo("slow",0.3);
                 });
 
             });
@@ -39,6 +39,10 @@
                 margin:5px;
                 background-color:darkgray;
                 opacity:0.75;
+            }
+            #fadeEffects
+            {
+                display:none;
             }
     </style>
     </head>
@@ -61,15 +65,12 @@
             <div id="d1">
                 <h1> Demonstration:</h1>
                 <h1 class="display-2" style="font-size: 25px;">Click on the respective buttons to see the effect!!</h1>
-                <p id="p1" style="display: none;">Hey there..!</p>
-                <p id="p2">you are studying at A! tutorials</p>
-                <p id="p3">Hope you find the demonstration easy</p>
-                <button id="fadein">FadeIn</button>
-                <button id="fadeout">FadeOut</button>
-                <button id="fadetoggle">FadeToggle</button>
-                <button id="fadeto">FadeTo</button>
+                <p id="fadeEffects">DEMONSTRATION OF FADE EFFECTS</p>
             </div>
-
+            <button id="fadein" class="btn btn-success">FadeIn</button>
+            <button id="fadeout" class="btn btn-primary">FadeOut</button>
+            <button id="fadetoggle" class="btn btn-warning">FadeToggle</button>
+            <button id="fadeto" class="btn btn-light">FadeTo</button>
         </div>
     </body>
 </html>

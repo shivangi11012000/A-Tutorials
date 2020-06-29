@@ -9,18 +9,31 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
-                $(document).ready(function(){
-                $("#flip").click(function(){
+            $(document).ready(function(){
+                var isPannelUp = true;
+
+                $("#downbtn").click(function(){
+                    isPannelUp = false;
                     $("#panel").slideDown("slow");
+                    changePannelFlag(isPannelUp);
                 })
 
-                $("#flip1").click(function(){
-                    $("#panel1").slideUp("slow");
+                $("#upBtn").click(function(){
+                    isPannelUp = true;
+                    $("#panel").slideUp("slow");
+                    changePannelFlag(isPannelUp);
                 });
 
-                $("#flip2").click(function(){
-                    $("#panel2").slideToggle();
+                $("#toggleBtn").click(function(){
+                    $("#panel").slideToggle();
+                    isPannelUp = !isPannelUp;
+                    changePannelFlag(isPannelUp);
                 });
+
+                function changePannelFlag(isPannelUp) {
+                    var pannelValue = isPannelUp ? 'UP' : 'DOWN';
+                    $("#isPannelUp").text(pannelValue);
+                }
 
             });
         </script>
@@ -36,7 +49,7 @@
                 background-color:darkgray;
                 opacity:0.75;
             }
-            #panel,#panel1,#panel2, #flip, #flip1, #flip2 {
+            #panel{
             padding: 5px;
             text-align: center;
             background-color: #e5eecc;
@@ -68,28 +81,18 @@
             </div>
             <div id="d1">
                 <h1> Demonstration:</h1>
-                <h1 class="display-2" style="font-size: 25px;">Click on the panel and see the Slide down effect!!</h1>
-                <div id="flip">Click to see slide down effect</div>
-                <div id="panel">This is Demonstartion of slide down effect!</div>
+                <h1 class="display-2" style="font-size: 25px;">Click on the panel and see the Slide effect!!</h1>
+                <p>
+                    Pannel is = 
+                    <span id="isPannelUp">UP</span>
+                </p>
+                <div id="panel">Sample Text!</div>
             </div>
 
             <br>
-
-            <div id="d2">
-                <h1> Demonstration:</h1>
-                <h1 class="display-2" style="font-size: 25px;">Click on the panel and see the Slide up effect!!</h1>
-                <div id="flip1">Click to see slide up effect</div>
-                <div id="panel1">This is Demonstartion of slide down effect!</div>
-            </div>
-
-            <br>
-
-            <div id="d3">
-                <h1> Demonstration:</h1>
-                <h1 class="display-2" style="font-size: 25px;">Click on the panel and see the Toggle effect!!</h1>
-                <div id="flip2">Click to see toggle effect</div>
-                <div id="panel2">This is Demonstartion of toggle effect!</div>
-            </div>
+            <button id="downbtn" class="btn btn-primary">Slide Down Effect</button>
+            <button id="upBtn" class="btn btn-success">Slide Up Effect</button>
+            <button id="toggleBtn" class="btn btn-warning">Slide Toggle Effect</button>
         </div>
     </body>
 </html>

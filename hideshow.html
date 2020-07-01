@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                let hiddenFlag = false;
+
+                function changeFlag(flag) {
+                    $("#flag").text(flag);
+                }
+
+                 $("#hide").click(function()
+                 {
+                     $("#sampleText").hide(1000);
+                     hiddenFlag = true;
+                     changeFlag(hiddenFlag);
+                 })
+
+                 $("#show").click(function()
+                 {
+                     $("#sampleText").show(1000);
+                     hiddenFlag = false;
+                     changeFlag(hiddenFlag);
+                 })
+
+                 $("#toggle").click(function(){
+                    $("#sampleText").toggle(1000);
+                    hiddenFlag = !hiddenFlag;
+                    changeFlag(hiddenFlag);
+                });
+            });
+        </script>
+    <style>
+         body{
+                    background-image:url("resources/images/defaultBackground.jpg");
+                    background-size:cover;
+            }
+            #d1{
+                border:1px solid;
+                padding:5px;
+                margin:5px;
+                background-color:darkgray;
+                opacity:0.75;
+            }
+    </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div>
+                <h1>Hide and Show Effect in Jquery</h1>
+                <span class="display-4" style="font-size: 25px;">
+                    With jQuery, you can hide and show HTML elements with the hide() and show() methods.
+                    You can also toggle between hiding and showing an element with the toggle() method.
+                </span>
+            </div><br><br><br>
+            <div id="d1">
+                <h1> Demonstration:</h1>
+                <h1 class="display-2" style="font-size: 25px;">Click on the respective buttons and see the hide , show and toggle effect!!</h1>
+                <p id="sampleText">Sample Text</p>
+                <div>
+                    <span> Hidden Flag = </span>
+                    <span id = "flag">false</span>
+                </div>
+            </div>
+            <button id="hide" class="btn btn-primary">Hide</button>
+            <button id="show" class="btn btn-success">Show</button>
+            <button id="toggle" class="btn btn-warning">Toggle</button>
+        </div>
+    </body>
+</html>

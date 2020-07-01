@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+              $("button").dblclick(function()
+              {
+                  $("p").css("font-size","30px");
+              })
+            });
+        </script>
+    <style>
+         body{
+                    background-image:url("resources/images/defaultBackground.jpg");
+                    background-size:cover;
+            }
+            #d1{
+                border:1px solid;
+                padding:5px;
+                margin:5px;
+                background-color:darkgray;
+                opacity:0.75;
+            }
+    </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div>
+                <h1>Double Click Effect in Jquery</h1>
+                <span class="display-4" style="font-size: 25px;">
+                    The dblclick() method attaches an event handler function to an HTML element.
+
+                    The function is executed when the user double-clicks on the HTML element:
+                </span>
+            </div><br><br><br>
+            <div id="d1">
+                <h1> Demonstration:</h1><br>
+                <p >This is my first jquery page</p>
+                <p >This is my first jquery</p>
+                <p>This is my page</p>
+                <button>Click here twice!!</button>
+            </div>
+        </div>
+    </body>
+</html>

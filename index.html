@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <style>
+                body{
+                    background-image:url("resources/images/defaultBackground.jpg");
+                    background-size:cover;
+                }
+                .btn-change{
+                    background: lightseagreen;
+                    float:left;
+                    height: 55px;
+                    box-shadow: 0 0 1px #ccc;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    border: 0px;
+                    color: #fff;
+                    font-family: cursive;
+                }
+                a{
+                    color:white;
+                    text-decoration: none;
+                }
+                .ml2 {
+                        font-weight: 900;
+                        font-size: 3.5em;
+                        }
+
+                        .ml2 .letter {
+                        display: inline-block;
+                        line-height: 1em;
+                    }
+            </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <h1 class="display-1">A! Tutorials</h1>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8">
+                    <div class="navbar" style="background-color:black;opacity: 0.6;">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">CSS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">JAVASCRIPT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="jquery.html">JQUERY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">BOOTSTRAP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ANGULAR JS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="suggestions.html">SUGGESTIONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ABOUT US</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div> 
+            
+
+        <div>
+            <h1 class="ml2">Aspire to Learn??</h1>
+            <h6 class="ml2">So you made a good decision choosing us!</h6>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            <script>
+                var textWrapper = document.querySelector('.ml2');
+                textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+                anime.timeline({loop: true})
+                .add({
+                    targets: '.ml2 .letter',
+                    scale: [4,1],
+                    opacity: [0,1],
+                    translateZ: 0,
+                    easing: "easeOutExpo",
+                    duration: 950,
+                    delay: (el, i) => 70*i
+                }).add({
+                    targets: '.ml2',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+            </script>
+        </div>
+
+
+
+        <div>
+            <marquee behavior="scroll" direction="left">
+                <img src="resources/images/marqueList1.jpg" width="300" height="200" alt="Natural">
+                <img src="resources/images/marqueList2.png" width="300" height="200" alt="Natural">
+                <img src="resources/images/marqueList3.jpg" width="300" height="200" alt="Natural">
+                <img src="resources/images/marqueList4.jpg" width="300" height="200" alt="Natural">
+                <img src="resources/images/marqueList5.jpg" width="300" height="200" alt="Natural">
+                <img src="resources/images/marqueList6.png" width="300" height="200" alt="Natural">
+                <img src="resources/images/marqueList7.png" width="300" height="200" alt="Natural">
+                <img src="resources/images/marqueList8.jpg" width="300" height="200" alt="Natural">
+            </marquee>
+        </div>
+        <marquee style="text-shadow: black;color: rgb(10, 10, 10);font-family: fantasy;background-color:dimgrey;" direction="right">Site Under Mentainence. Sorry for Inconvinience.</marquee>
+       </div>
+    </body>
+</html>
+
+

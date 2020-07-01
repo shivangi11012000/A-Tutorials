@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+              $("#i1").focus(function()
+              {
+                  $("#i1").css("background-color","yellow");
+              })
+            });
+        </script>
+    <style>
+         body{
+                    background-image:url("resources/images/defaultBackground.jpg");
+                    background-size:cover;
+            }
+            #d1{
+                border:1px solid;
+                padding:5px;
+                margin:5px;
+                background-color:darkgray;
+                opacity:0.75;
+            }
+    </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div>
+                <h1>Focus Effect in Jquery</h1>
+                <span class="display-4" style="font-size: 25px;">
+                    The focus() method attaches an event handler function to an HTML form field.
+
+                    The function is executed when the form field gets focus:
+                </span>
+            </div><br><br><br>
+            <div id="d1">
+                <h1> Demonstration:</h1><br>
+                <h4>Fill this Form:</h4>
+                Enter your name:<br>
+                <input type="text" id="i1"><br><br>
+                Email:<br>
+                <input type="Email" placeholder="Enter your Email id"><br><br>
+                UserId:<br>
+                <input type="text" placeholder="Enter your user id"><br><br>
+                Password<br>
+                <input type="Password" placeholder="Enter your Password"><br><br>
+            </div>
+        </div>
+    </body>
+</html>
